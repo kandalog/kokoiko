@@ -1,5 +1,166 @@
+@charset "UTF-8";
 @import "~bootstrap/scss/bootstrap.scss";
 
-h1 {
-  color: red;
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+header, footer, nav, section, article, aside, figure, figcaption {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+  list-style-type: none;
+}
+
+
+/*sassの共通css*/
+$color-main: #262626;
+$color-accent: #D9D8D8;
+$color-text: #333333;
+
+// ブレークポイント
+$breakpoints: (
+  'sp': 'screen and (max-width: 767px)', 
+  'tab': 'screen and (min-width: 768px) and (max-width: 1024px)', 
+  'pc': 'screen and (min-width: 1025px)' 
+) !default;
+
+
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/*基本共通のCSS*/
+body {
+  color: #333;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  opacity: 0.7;
+  color: #fff;
+}
+
+.clear::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.is-pc {
+
+  @include mq('sp') {
+    display: none;
+  }
+}
+
+.is-sp {
+  
+  @include mq('pc') {
+    display: none;
+  }
+}
+
+/* common
+--------------------------------------------------------------*/
+
+
+/* header
+--------------------------------------------------------------*/
+
+.header {
+  height: 80px;
+  width: 100%;
+  background: $color-main;
+}
+
+.header__inner {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+.header__title {
+    font-size: 40px;
+  a {
+    display: inline-block;
+  }
+}
+
+.header__nav {
+  margin-left: auto;
+}
+
+.header__nav-list {
+  display: flex;
+
+}
+
+.header__nav-item {
+  &:not(:first-of-type) {
+    margin-left: 20px;
+  }
+
+  a {
+    display: inline-block;
+    line-height: 80px;
+    font-size: 20px;
+  }
+}
+
+/* top
+--------------------------------------------------------------*/
+.top__img {
+  height: calc(100vh - 80px);
+  background: url(../../assets/images/top-img2.jpg) no-repeat center center / cover;
+  // 大きいサイズ top90%あたりを指定
+  position: relative;
+}
+
+.top_message {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  color: #fff;
+  font-size: 44px;
+  font-weight: bold;
 }

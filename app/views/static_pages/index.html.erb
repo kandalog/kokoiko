@@ -1,2 +1,12 @@
-<h1>StaticPages#index</h1>
-<p>Find me in app/views/static_pages/index</p>
+<% unless user_signed_in? %>
+<div class="top__img">
+<p class="top_message">
+行き先を登録して<br>
+旅行リストを作ろう
+</p>
+</div>
+
+<% else %>
+ユーザーはサインインしています
+
+<% end %>
