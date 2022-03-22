@@ -33,6 +33,7 @@ ol, ul {
 $color-main: #262626;
 $color-accent: #D9D8D8;
 $color-text: #333333;
+$color-background: #F4F5F7;
 
 // ブレークポイント
 $breakpoints: (
@@ -54,6 +55,7 @@ body {
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   line-height: 1.5;
   font-size: 16px;
+  background-color: $color-background;
 }
 
 img {
@@ -99,7 +101,16 @@ a:hover {
 
 /* common
 --------------------------------------------------------------*/
+.inner {
+  width: 1200px;
+  margin: 0 auto;
+  max-width: 100%;
+}
 
+.util__head {
+  font-size: 41px;
+  font-weight: bold;
+}
 
 /* header
 --------------------------------------------------------------*/
@@ -164,3 +175,72 @@ a:hover {
   font-size: 44px;
   font-weight: bold;
 }
+
+/* sign__up-inner
+--------------------------------------------------------------*/
+.sign__up-inner {
+  width: 670px;
+  max-width: 100%;
+  margin: 80px auto 0;
+}
+
+.sign__up-form {
+  margin-top: 50px;
+}
+
+.contact__form-row {
+
+  & + & {
+    margin-top: 20px;
+  }
+
+  label {
+    font-size: 20px;
+  }
+
+  input {
+    box-shadow: 2px 2px 6px #00000029;
+    border: none;
+    background: #fff;
+    padding: 8px 16px;
+    appearance: none;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  [type="name"],
+  [type="email"] {
+
+  }
+
+  [type="password"],
+  [type="password_confirmation"] {
+
+  }
+}
+
+.sing_up-form-button {
+  margin-top: 20px;
+
+  input {
+    
+    border-radius: 7px;
+    width: 115px;
+    height: 42px;
+    background-color: $color-main;
+    color: #fff;
+    border: none;
+    display: inline-block;
+    transition: .3s;
+
+    &:hover {
+      opacity: .7;
+      
+    }
+  }
+}
+
