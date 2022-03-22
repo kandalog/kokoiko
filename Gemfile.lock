@@ -87,6 +87,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    digest (3.1.0)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
@@ -114,6 +115,7 @@ GEM
     http_parser.rb (0.8.0)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
+    io-wait (0.2.1)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -134,6 +136,21 @@ GEM
     msgpack (1.4.5)
     multi_json (1.15.0)
     nenv (0.3.0)
+    net-imap (0.2.3)
+      digest
+      net-protocol
+      strscan
+    net-pop (0.1.1)
+      digest
+      net-protocol
+      timeout
+    net-protocol (0.1.2)
+      io-wait
+      timeout
+    net-smtp (0.3.1)
+      digest
+      net-protocol
+      timeout
     nio4r (2.5.8)
     nokogiri (1.13.3-arm64-darwin)
       racc (~> 1.4)
@@ -216,8 +233,10 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    strscan (3.0.1)
     thor (1.2.1)
     tilt (2.0.10)
+    timeout (0.2.0)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -257,6 +276,9 @@ DEPENDENCIES
   guard-livereload
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  net-imap
+  net-pop
+  net-smtp
   pg (~> 1.1)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
