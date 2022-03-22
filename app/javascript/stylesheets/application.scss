@@ -188,7 +188,7 @@ a:hover {
   margin-top: 50px;
 }
 
-.contact__form-row {
+.form__row {
 
   & + & {
     margin-top: 20px;
@@ -223,7 +223,7 @@ a:hover {
   }
 }
 
-.sing_up-form-button {
+.form__button {
   margin-top: 20px;
 
   input {
@@ -244,3 +244,26 @@ a:hover {
   }
 }
 
+
+/* login__form
+--------------------------------------------------------------*/
+.login__inner {
+  width: 670px;
+  margin: 80px auto 0;
+}
+
+.login__head {
+
+}
+
+.login__form {
+  margin-top: 50px;
+}
+
+.form__checkbox {
+  // チェックボック隠している
+  display: none;
+  input {
+    border-radius: 0px;
+  }
+}
