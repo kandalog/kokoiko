@@ -3,8 +3,17 @@
   <h1 class="header__title"><%= link_to "ココイコ", root_path %></h1>
   <nav class="header__nav">
   <ul class="header__nav-list">
+
+<!-- ログインしていたら下記 -->
+<% if user_signed_in? %>
+    <li class="header__nav-item"><%= link_to "旅行先", root_path %></li>
+    <li class="header__nav-item"><%= link_to "プロフィール", user_path(current_user) %></li>
+    <li class="header__nav-item"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+<% elsif %>
+<!-- ログインしていなかったら下記 -->
     <li class="header__nav-item"><%= link_to "新規登録", new_user_registration_path %></li>
     <li class="header__nav-item"><%= link_to "ログイン", new_user_session_path %></li>
+<% end %>
   </ul>
   </nav>
 </div>
