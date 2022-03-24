@@ -12,4 +12,7 @@ class User < ApplicationRecord
 
   # introductionは255文字以内に指定
   validates :introduction, length: {maximum: 255}
+
+  # アップローダーを紐付け
+  mount_uploader :image, ImageUploader
 end

@@ -6,8 +6,8 @@ protected
 
   # nameを受け取れるようにdeviseのストリングパラメーターを修正
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :introduction])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :image])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :introduction, :image])
   end
 
 end

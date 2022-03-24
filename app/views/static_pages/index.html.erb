@@ -9,4 +9,10 @@
 <% else %>
 ユーザーはサインインしています
 
+<% if current_user.image? %>
+  <%= image_tag current_user.image.url %>
+<% else %>
+  <div class="default__img"><%= image_tag ("noimg.jpeg") %></div>
+<% end %>
+
 <% end %>

@@ -7,6 +7,9 @@
 # Ignore bundler config.
 /.bundle
 
+# アップローダーアップローダー経由の写真を管理対象外にする
+public/uploads/
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -117,7 +120,8 @@ yarn-debug.log*
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
