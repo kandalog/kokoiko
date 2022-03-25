@@ -3,7 +3,48 @@
   <%= render 'shared/aside' %>
 
   <main class="profile__main">
-    sss
+    <div class="profile__inner">
+
+    <!-- プロフィール上部 -->
+      <div class="profile__contents">
+        <ul class="profile__list">
+
+          <div class="profile__left">
+            <p class="profile__img">
+              <%= image_tag current_user.image_url(:large)  %>
+            </p>
+            <p class="profile__name"><%= current_user.name %></p>
+          </div>
+          
+          <!-- プロフィール 右側 -->
+          <div class="profile__right">
+            <p class="profile__edit-link"><%= link_to "プロフィール編集", root_path %></p>
+            <p class="profile__destination-count">目的地<span>※9件</span></p>
+            <p class="profile__introduction">
+              ※紹介文がこちらに
+              <%= current_user.introduction %>
+            </p>
+          </div>
+
+        </ul>
+      </div>
+
+      <!-- 目的地 -->
+      <div class="profile__destination">
+        <p class="profile__head">目的地</p>
+        <ul class="destination__list profile">
+          
+          <%= render 'shared/destination' %>
+          
+
+        </ul>
+      </div>
+      
+      <div class="ab">
+      <%= link_to "aaaa", edit_user_registration_path %>
+      </div>
+      
+    </div>
   </main>
 
 </div>

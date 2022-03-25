@@ -391,4 +391,170 @@ aside {
   flex: 1;
   height: 100%;
   overflow: auto;
+  padding-top: 80px;
+}
+
+.profile__inner {
+  width: 740px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+/* プロフィール上部
+-----------------------------------------*/
+.profile__contents {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.profile__list {
+  display: flex;
+}
+
+/* プロフィール左
+-----------------------------------------*/
+
+.profile__left {
+
+}
+
+.profile__img {
+  width: 145px;
+  height: 145px;
+  img {
+    display: block;
+    border-radius: 50%;
+  }
+}
+
+.profile__name {
+  margin-top: 15px;
+  text-align: center;
+}
+
+
+/* プロフィール右
+-----------------------------------------*/
+
+.profile__right {
+  margin-left: 100px;
+  padding-top: 10px;
+}
+
+.profile__edit-link {
+
+  a {
+    font-size: 12px;
+    display: block;
+    background-color: $color-main;
+    width: 130px;
+    height: 30px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: -27px;
+      content: "";
+      color: $color-main;
+      transform: translateY(-50%);
+      background: url(../../assets/images/setting.png) no-repeat center / cover;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.profile__destination-count {
+  margin-top: 15px;
+
+  span {
+    margin-left: 8px;
+  }
+
+}
+
+.profile__introduction {
+  margin-top: 50px;
+
+}
+
+/* プロフィールの目的地一覧
+-----------------------------------------*/
+
+.profile__destination {
+  border-top: 1px solid #707070;
+  margin-top: 60px;
+}
+
+.profile__head {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+/* destination-list
+-----------------------------------------*/
+.destination__list {
+  display: flex;
+  
+  &.profile {
+    margin-top: 20px;
+  }
+}
+
+.destination__item {
+  width: calc(33% - 20px * 2 / 3);
+  background-color: $color-main;
+  color: #fff;
+  text-align: center;
+  border-radius: 14px;
+
+  a {
+    display: block;
+  }
+
+  & + & {
+    margin-left: 20px;
+  }
+}
+
+.destination__location {
+  font-size: 30px;
+  padding-top: 33px;
+}
+
+.destination__date {
+  margin-top: 35px;
+  font-size: 24px;
+}
+
+.destination__img {
+  width: 55px;
+  height: 55px;
+  margin: 25px auto 0;
+
+  img {
+    display: block;
+    border-radius: 50%;
+  }
+}
+
+.destination__name {
+  margin-top: 5px;
+  padding-bottom: 30px;
+}
+
+
+
+
+.ab {
+  a {
+    display: block;
+    color: $color-main;
+  }
 }

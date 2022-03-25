@@ -1,0 +1,8 @@
+<li class="destination__item">
+  <%= link_to root_path do %>
+    <p class="destination__location">※大阪観光</p>
+    <p class="destination__date">2泊3日</p>
+    <p class="destination__img"><%= image_tag current_user.image_url(:small) %></p>
+    <p class="destination__name"><%= current_user.name %></p>
+  <% end %>
+</li>
