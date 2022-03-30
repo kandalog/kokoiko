@@ -1,3 +1,4 @@
+<!-- ログインしていなかったら -->
 <% unless user_signed_in? %>
 <div class="top__img">
 <p class="top_message">
@@ -7,9 +8,43 @@
 </div>
 
 <% else %>
-ユーザーはサインインしています
+<!-- ログインしていたら -->
+<div class="divide__inner">
+  <%= render 'shared/aside' %>
+  <main class="main index__main">
+    <div class="index__inner">
+    <h2 class="util__head index">
+      <% if current_user.destinations.present? %>
+        目的地一覧
+      <% else %>
+        目的地を追加してください
+      <% end %>
+    </h2>
+      <ul class="destination__list">
 
+        <% @destinations.each do |destination| %>
+          
 
-  <%= image_tag current_user.image.url %>
+        <li class="destination__item">
+          <%= link_to destination_path(destination.id)  do %>
+            <p class="destination__location"><%= destination.destination %></p>
+            <% if destination.date.present? %>
+            <p class="destination__date"><%= destination.date %></p>
+            <% else %>
+            <p class="destination__date">日程未定</p>
+            <% end %>
+
+            <p class="destination__img"><%= image_tag current_user.image_url(:small) %></p>
+            <p class="destination__name"><%= current_user.name %></p>
+          <% end %>
+        </li>
+
+        <% end %>
+      </ul>
+      
+    </div>
+  </main>
+</div>
+
 
 <% end %>

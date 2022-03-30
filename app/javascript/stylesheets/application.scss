@@ -39,9 +39,8 @@ $color-background: #F4F5F7;
 $breakpoints: (
   'sp': 'screen and (max-width: 767px)', 
   'tab': 'screen and (min-width: 768px) and (max-width: 1024px)', 
-  'pc': 'screen and (min-width: 1025px)' 
+  'pc': 'screen and (min-width: 1025px)'
 ) !default;
-
 
 @mixin mq($breakpoint: sp) {
   @media #{map-get($breakpoints, $breakpoint)} {
@@ -110,6 +109,17 @@ a:hover {
 .util__head {
   font-size: 41px;
   font-weight: bold;
+}
+
+.main {
+  flex: 1;
+  height: 100%;
+  overflow: auto;
+}
+
+.divide__inner {
+  display: flex;
+  height: calc(100vh - 80px);
 }
 
 /* header
@@ -226,6 +236,10 @@ a:hover {
 .form__button {
   margin-top: 20px;
 
+  &.destination {
+    padding-bottom: 20px;
+  }
+
   input {
     
     border-radius: 7px;
@@ -299,11 +313,6 @@ a:hover {
 
 /* sidebar
 ------------------------------------------*/
-
-.divide__inner {
-  display: flex;
-  height: calc(100vh - 80px);
-}
 
 aside {
   background-color: $color-accent;
@@ -401,7 +410,7 @@ aside {
 }
 
 .profile__inner {
-  width: 740px;
+  width: 800px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -508,6 +517,8 @@ aside {
 -----------------------------------------*/
 .destination__list {
   display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
   
   &.profile {
     margin-top: 20px;
@@ -515,7 +526,7 @@ aside {
 }
 
 .destination__item {
-  width: calc(33% - 20px * 2 / 3);
+  width: calc(33% - 50px * 2 / 3);
   background-color: $color-main;
   color: #fff;
   text-align: center;
@@ -525,8 +536,12 @@ aside {
     display: block;
   }
 
-  & + & {
-    margin-left: 20px;
+  &:not(:nth-child(3n + 1)) {
+    margin-left: 50px;
+  }
+
+  &:nth-child(n + 4) {
+    margin-top: 30px;
   }
 }
 
@@ -664,4 +679,215 @@ aside {
   justify-content: center !important;
   align-items: center !important;
 
+}
+
+/* indexページ
+-----------------------------------------*/
+.index__inner {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.index__main {
+  padding-top: 50px;
+}
+
+
+/* destination
+-----------------------------------------*/
+
+.destination_inner {
+  width: 950px;
+  margin: 0 auto;
+  max-width: 100%;
+
+}
+
+.destination__head {
+  background: $color-main;
+  width: 350px;
+  max-width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border-radius: 15px;
+}
+
+.destination__head-location {
+  font-size: 37px;
+  
+}
+
+.destination__head-date {
+  font-size: 29px;
+  margin-left: 30px;
+}
+
+.destination__button {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  a {
+    color: $color-text;
+  }
+}
+
+.destination__button-item {
+  & + & {
+    margin-left: 20px;
+  }
+  a {
+    
+  }
+}
+
+/* destination__list
+-----------------------------------------*/
+.destination__dl {
+  margin-top: 10px;
+}
+
+.destination__row {
+  display: flex;
+  color: white;
+  height: 50px;
+
+  &:nth-child(2n - 1) {
+    background: $color-main;
+  }
+
+  &:nth-child(2n) {
+    background: #474C51;
+  }
+}
+
+.destination__dt {
+  border-right: 1px solid #fff;
+  width: 350px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  a {
+
+  }
+}
+
+.destination__dd {
+  width: calc(100% - 350px);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  height: inherit;
+  a {
+    font-size: 20px;
+    overflow: auto;
+    white-space: nowrap;
+  }
+}
+
+
+
+/* destination__form
+-----------------------------------------*/
+.destination__inner {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.destination__form-dl {
+  margin-top: 30px;
+}
+
+.destination__form-row {
+  & + & {
+    margin-top: 20px;
+  }
+}
+
+.destination__label {
+
+  label {
+
+  }
+}
+
+.destination__input {
+  margin-top: 10px;
+
+  [type="text"] {
+    box-shadow: 2px 2px 6px #00000029;
+    border: none;
+    background: #fff;
+    padding: 8px 16px;
+    appearance: none;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    width: 70%;
+  }
+}
+
+/* 経由地点
+-----------------------------------------*/
+
+.destination__head-sub {
+  margin-top: 40px;
+  font-size: 30px;
+}
+
+.destination__via-dl {
+
+}
+
+.destination__via-row {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.destination__label-via {
+  
+
+  label {
+    width: 100%;
+
+  }
+}
+
+.destination__input-via {
+  margin-top: 10px;
+  
+
+  [type="text"] {
+    box-shadow: 2px 2px 6px #00000029;
+    border: none;
+    background: #fff;
+    padding: 8px 16px;
+    appearance: none;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    width: 100%;
+
+  }
+}
+
+.via__container {
+  
+  width: calc(100% - 50px / 2);
+
+  & + & {
+    margin-left: 50px;
+  }
 }

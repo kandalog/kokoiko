@@ -1,0 +1,106 @@
+<div class="divide__inner">
+  <%= render 'shared/aside' %>
+  <main class="main index__main">
+    <div class="destination_inner">
+
+      <div class="destination__head">
+        <p class="destination__head-location"><%= @destination.destination %></p>
+        <p class="destination__head-date"><%= @destination.date %></p>
+      </div>
+
+      <ul class="destination__button">
+        <li class="destination__button-item">
+          <%= link_to "編集", edit_destination_path(@destination) %>
+        </li>
+        <li class="destination__button-item">
+          <%= link_to "削除", root_path %>
+        </li>
+      </ul>
+
+
+      <dl class="destination__dl">
+
+        <div class="destination__row">
+          <dt class="destination__dt">
+            行き先
+          </dt>
+          <dd class="destination__dd">
+            URL
+          </dd>
+        </div>
+
+        <div class="destination__row">
+          <dt class="destination__dt">
+            <%= @destination.via1 %>
+          </dt>
+          <dd class="destination__dd">
+          <% if @destination.url1.present? %>
+            <%= link_to @destination.url1, @destination.url1 %>
+          <% end %>
+          </dd>
+        </div>
+
+        <div class="destination__row">
+          <dt class="destination__dt">
+            <%= @destination.via2 %>
+          </dt>
+          <dd class="destination__dd">
+          <% if @destination.url2.present? %>
+            <%= link_to @destination.url2, @destination.url2 %>
+          <% end %>
+          </dd>
+        </div>
+
+        <div class="destination__row">
+          <dt class="destination__dt">
+            <%= @destination.via3 %>
+          </dt>
+          <dd class="destination__dd">
+          <% if @destination.url3.present? %>
+            <%= link_to @destination.url3, @destination.url3 %>
+          <% end %>
+          </dd>
+        </div>
+
+        <div class="destination__row">
+          <dt class="destination__dt">
+            <%= @destination.via3 %>
+          </dt>
+          <dd class="destination__dd">
+          <% if @destination.url3.present? %>
+            <%= link_to @destination.url3, @destination.url3 %>
+          <% end %>
+          
+          </dd>
+        </div>
+
+        <div class="destination__row">
+          <dt class="destination__dt">
+            <%= @destination.via4 %>
+          </dt>
+          <dd class="destination__dd">
+          <% if @destination.url4.present? %>
+            <%= link_to @destination.url4, @destination.url4 %>
+          <% end %>
+          </dd>
+        </div>
+
+        <div class="destination__row">
+          <dt class="destination__dt">
+            <%= @destination.via5 %>
+          </dt>
+          <dd class="destination__dd">
+          <% if @destination.url5.present? %>
+            <%= link_to @destination.url5, @destination.url5 %>
+          <% end %>
+          </dd>
+        </div>
+
+
+      </dl>
+
+
+      
+    </div>
+  </main>
+</div>

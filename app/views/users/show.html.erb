@@ -34,14 +34,28 @@
         <p class="profile__head">目的地</p>
         <ul class="destination__list profile">
           
-          <%= render 'shared/destination' %>
+          <!-- 予定を3件のみ表示 -->
+          <% @destinations.each do |destination| %>
+          
+
+        <li class="destination__item">
+          <%= link_to destination_path(destination.id)  do %>
+            <p class="destination__location"><%= destination.destination %></p>
+            <% if destination.date.present? %>
+            <p class="destination__date"><%= destination.date %></p>
+            <% else %>
+            <p class="destination__date">日程未定</p>
+            <% end %>
+
+            <p class="destination__img"><%= image_tag current_user.image_url(:small) %></p>
+            <p class="destination__name"><%= current_user.name %></p>
+          <% end %>
+        </li>
+
+        <% end %>
           
 
         </ul>
-      </div>
-      
-      <div class="ab">
-      <%= link_to "aaaa", edit_user_registration_path %>
       </div>
       
     </div>
