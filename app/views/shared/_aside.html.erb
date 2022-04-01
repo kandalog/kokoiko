@@ -1,4 +1,6 @@
 <aside>
+
+<!--
     <p class="sidebar__button">
       <%= link_to "目的地を追加", new_destination_path  %>
     </p>
@@ -12,4 +14,24 @@
       </ul>
       <p class="sidebar__footer">Copyright reserved.</p>
     </div>
-  </aside>
+  
+  -->
+
+  <div class="aside__fixed">
+    <p class="sidebar__button">
+      <%= link_to "目的地を追加", new_destination_path  %>
+    </p>
+
+    <div class="sidebar__contents">
+      <p class="sidebar__contact"><%= link_to "お問い合わせ", root_path %></p>
+      <p class="sidebar__privacy"><%= link_to "プライバシーポリシー", root_path %></p>
+      <ul class="sns__list">
+        <p class="sns__item"><%= link_to image_tag("twitter.png"), root_path %></p>
+        <p class="sns__item"><%= link_to image_tag("github.png"), root_path %></p>
+      </ul>
+      <p class="sidebar__footer">Copyright reserved.</p>
+      s
+    </div>
+  </div>
+
+</aside>

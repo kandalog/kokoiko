@@ -24,10 +24,22 @@ class DestinationsController < ApplicationController
   end
 
   def update
+    @destination = Destination.find(params[:id])
 
+    if @destination.update(destination_params)
+      flash[:notice] = "目的地を編集しました。"
+      redirect_to show
+    else 
+      flash.now[:notice] = "編集に失敗しました。変更内容を確認してください。"
+      render edit
+    end
   end
 
   def destroy
+    destination = Destination.find(params[:id])
+    destination.destroy
+    flash[:notice] = "目的地を削除しました"
+    redirect_to root_path
   end
   
   private

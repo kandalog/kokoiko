@@ -1,1 +1,143 @@
-編集ページ
+<div class="divide__inner">
+  <%= render 'shared/aside' %>
+  
+  <div class="destination__inner">
+  <h2 class="util__head">行き先を編集</h2>
+  <div class="destination__form">
+    <%= form_with model: @destination, local: true do |f| %>
+        
+        <dl class="destination__form-dl">
+
+          <div class="destination__form-row">
+            <dt class="destination__label">
+              <%= f.label :destination, "目的地" %>
+            </dt>
+            <dd class="destination__input">
+              <%= f.text_field :destination %>
+            </dd>
+          </div>
+
+          <div class="destination__form-row">
+            <dt class="destination__label">
+              <%= f.label :date, "宿泊日数" %>
+            </dt>
+            <dd class="destination__input">
+              <%= f.text_field :date %>
+            </dd>
+          </div>
+
+        </dl>
+
+        <!-- 経由地点 -->
+        <h3 class="destination__head-sub">経由地点を追加</h3>
+
+        <dl class="destination__via-dl">
+
+        <div class="destination__via-row">
+          <div class="via__container">
+            <dt class="destination__label-via">
+              <%= f.label :via1, "目的地" %>
+            </dt>
+            <dd class="destination__input-via">
+              <%= f.text_field :via1 %>
+            </dd>
+          </div>
+          <div class="via__container">
+            <dt class="destination__label-via">
+              <%= f.label :url1, "URL" %>
+            </dt>
+            <dd class="destination__input-via">
+              <%= f.text_field :url1 %>
+            </dd>
+          </div>
+        </div>
+
+        <div class="destination__via-row">
+          <div class="via__container">
+            <dt class="destination__label-via">
+              <%= f.label :via2, "目的地" %>
+            </dt>
+            <dd class="destination__input-via">
+              <%= f.text_field :via2 %>
+            </dd>
+          </div>
+          <div class="via__container">
+            <dt class="destination__label-via">
+              <%= f.label :url2, "URL" %>
+            </dt>
+            <dd class="destination__input-via">
+              <%= f.text_field :url2 %>
+            </dd>
+          </div>
+        </div>
+
+        <div class="destination__via-row">
+          <div class="via__container">
+            <dt class="destination__label-via">
+              <%= f.label :via3, "目的地" %>
+            </dt>
+            <dd class="destination__input-via">
+              <%= f.text_field :via3 %>
+            </dd>
+          </div>
+          <div class="via__container">
+            <dt class="destination__label-via">
+              <%= f.label :url3, "URL" %>
+            </dt>
+            <dd class="destination__input-via">
+              <%= f.text_field :url3 %>
+            </dd>
+          </div>
+        </div>
+
+        <div class="destination__via-row">
+          <div class="via__container">
+            <dt class="destination__label-via">
+              <%= f.label :via4, "目的地" %>
+            </dt>
+            <dd class="destination__input-via">
+              <%= f.text_field :via4 %>
+            </dd>
+          </div>
+          <div class="via__container">
+            <dt class="destination__label-via">
+              <%= f.label :url4, "URL" %>
+            </dt>
+            <dd class="destination__input-via">
+              <%= f.text_field :url4 %>
+            </dd>
+          </div>
+        </div>
+
+        <div class="destination__via-row">
+          <div class="via__container">
+            <dt class="destination__label-via">
+              <%= f.label :via5, "目的地" %>
+            </dt>
+            <dd class="destination__input-via">
+              <%= f.text_field :via5 %>
+            </dd>
+          </div>
+          <div class="via__container">
+            <dt class="destination__label-via">
+              <%= f.label :url5, "URL" %>
+            </dt>
+            <dd class="destination__input-via">
+              <%= f.text_field :url5 %>
+            </dd>
+          </div>
+        </div>
+
+        </dl>
+        
+        <div class="form__button destination">
+          <%= f.submit "編集する"%>
+        </div>
+        
+    <% end %>
+  </div>
+</div>
+
+
+
+</div>

@@ -1,4 +1,7 @@
-<div class="destination__inner">
+<div class="divide__inner">
+  <%= render 'shared/aside' %>
+  
+  <div class="destination__inner">
   <h2 class="util__head">行き先を追加</h2>
   <div class="destination__form">
     <%= form_with model: @destination, local: true do |f| %>
@@ -133,4 +136,8 @@
         
     <% end %>
   </div>
+</div>
+
+
+
 </div>

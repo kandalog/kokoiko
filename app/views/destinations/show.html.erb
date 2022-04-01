@@ -13,7 +13,7 @@
           <%= link_to "編集", edit_destination_path(@destination) %>
         </li>
         <li class="destination__button-item">
-          <%= link_to "削除", root_path %>
+          <%= link_to "削除", destination_path(@destination), method: :delete %>
         </li>
       </ul>
 
