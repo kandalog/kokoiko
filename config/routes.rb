@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   }
   get '/users/:id', to: 'users#show', as: 'user'
   resources :destinations, only: [:show, :new, :create, :edit, :update, :destroy]
-  get "/contact", to: 'static_pages#contact'
   get "/privacy", to: 'static_pages#privacy'
+  resources :contacts, only: [:new, :create]
 end

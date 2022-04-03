@@ -1,0 +1,20 @@
+<div class="contact__form">
+<h2 class="contact__form-head">お問い合わせ</h2>
+  <%= form_with(model: @contact, local: true) do |f| %>
+
+    <div class="contact__form-row">
+      <%= f.label :name, "名前" %>
+      <%= f.text_field :name, placeholder: "お名前" %>
+    </div>
+  
+    <div class="contact__form-row">
+      <%= f.label :message, "お問合せ内容" %>
+      <%= f.text_area :message, placeholder: "お問合せ内容を入力してください" %>
+    </div>
+
+    <div class="form__button">
+        <%= f.submit "送信" %>
+    </div>
+
+  <% end %>
+</div>

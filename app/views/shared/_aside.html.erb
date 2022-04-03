@@ -23,10 +23,10 @@
     </p>
 
     <div class="sidebar__contents">
-      <p class="sidebar__contact"><%= link_to "お問い合わせ", root_path %></p>
-      <p class="sidebar__privacy"><%= link_to "プライバシーポリシー", root_path %></p>
+      <p class="sidebar__contact"><%= link_to "お問い合わせ", new_contact_path( user_id: current_user.id ) %></p>
+      <p class="sidebar__privacy"><%= link_to "プライバシーポリシー", "https://drive.google.com/file/d/1i3vzA1KGUvkVRvwbSJGdmu5elmRWPr8j/view?usp=sharing", target: :_blank, rel: "noopener noreferrer" %></p>
       <ul class="sns__list">
-        <p class="sns__item"><%= link_to image_tag("twitter.png"), "https://kanda-web.com", target: :_blank, rel: "noopener noreferrer" %></p>
+        <p class="sns__item"><%= link_to image_tag("twitter.png"), "https://twitter.com/tee__eng", target: :_blank, rel: "noopener noreferrer" %></p>
         <p class="sns__item"><%= link_to image_tag("github.png"), "https://github.com/kandalog", target: :_blank, rel: "noopener noreferrer" %></p>
       </ul>
       <p class="sidebar__footer">Copyright reserved.</p>

@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "~bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&family=RocknRoll+One&display=swap');
 
 * {
   -webkit-box-sizing: border-box;
@@ -51,7 +52,10 @@ $breakpoints: (
 /*基本共通のCSS*/
 body {
   color: #333;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  // font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  
+  // それぞれ400と700
+  font-family: 'Noto Sans JP', 'Noto Serif JP', sans-serif; // 'RocknRoll One'も使用可能
   line-height: 1.5;
   font-size: 16px;
   background-color: $color-background;
@@ -164,10 +168,15 @@ a:hover {
   display: flex;
   align-items: center;
   height: inherit;
+  @include mq('tab') {
+    padding: 0 20px;
+  }
 }
 
 .header__title {
     font-size: 40px;
+    font-family: 'RocknRoll One', serif;
+    
   a {
     display: inline-block;
   }
@@ -585,11 +594,15 @@ aside {
   font-size: 30px;
   padding-top: 33px;
   white-space: nowrap;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
 }
 
 .destination__date {
   margin-top: 35px;
   font-size: 24px;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
 }
 
 .destination__img {
@@ -606,6 +619,8 @@ aside {
 .destination__name {
   margin-top: 5px;
   padding-bottom: 30px;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
 }
 
 
@@ -756,12 +771,15 @@ aside {
 
 .destination__head-location {
   font-size: 37px;
-  
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
 }
 
 .destination__head-date {
   font-size: 29px;
   margin-left: 30px;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
 }
 
 .destination__button {
@@ -810,6 +828,14 @@ aside {
   justify-content: center;
   align-items: center;
   font-size: 25px;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
+  
+  &.first {
+    font-family: 'Noto sans JP', serif;
+    font-weight: bold;
+  }
+
   a {
 
   }
@@ -823,6 +849,14 @@ aside {
   align-items: center;
   font-size: 25px;
   height: inherit;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
+
+  &.first {
+    font-family: 'Noto sans JP', serif;
+    font-weight: bold;
+  }
+
   a {
     font-size: 20px;
     overflow: auto;
@@ -927,5 +961,61 @@ aside {
 
   & + & {
     margin-left: 50px;
+  }
+}
+
+/* contact__form
+-----------------------------------------*/
+.contact__form {
+  width:  600px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.contact__form-head {
+  font-size: 40px;
+  text-align: center;
+  padding-top: 60px;
+  font-weight: bold;
+}
+
+.contact__form-row {
+
+  & + & {
+    margin-top: 20px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  [type="text"] {
+    box-shadow: 2px 2px 6px #00000029;
+    border: none;
+    background: #fff;
+    padding: 8px 16px;
+    appearance: none;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  textarea {
+    box-shadow: 2px 2px 6px #00000029;
+    border: none;
+    background: #fff;
+    padding: 8px 16px;
+    appearance: none;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    width: 100%;
+    height: 200px;
+    resize: vertical;
+    margin-top: 4px;
   }
 }
