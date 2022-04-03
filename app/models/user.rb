@@ -8,6 +8,12 @@ class User < ApplicationRecord
   
   validates :name, presence: true, length: { maximum: 50 }
 
+
+
+
+  
+  # emailのbvalidates
+  validates :email, format: {with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
   # 大文字・小文字を区別しない 一意生を担保する
   validates :email, uniqueness: { case_sensitive: false }
 
