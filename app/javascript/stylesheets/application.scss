@@ -491,6 +491,7 @@ aside {
 .profile__name {
   margin-top: 15px;
   text-align: center;
+  font-weight: bold;
 }
 
 
@@ -540,6 +541,7 @@ aside {
 }
 
 .profile__introduction {
+  width: 100%;
   margin-top: 50px;
 
 }
@@ -549,12 +551,13 @@ aside {
 
 .profile__destination {
   border-top: 1px solid #707070;
-  margin-top: 60px;
+  margin-top: 35px;
 }
 
 .profile__head {
   margin-top: 20px;
   font-size: 20px;
+  font-weight: bold;
 }
 
 /* destination-list
@@ -601,6 +604,7 @@ aside {
 .destination__date {
   margin-top: 35px;
   font-size: 24px;
+  letter-spacing: 0.1em;
   font-family: 'Noto Serif JP', serif;
   font-weight: bold;
 }
@@ -888,7 +892,7 @@ aside {
 .destination__label {
 
   label {
-
+    font-weight: bold;
   }
 }
 
@@ -915,6 +919,7 @@ aside {
 .destination__head-sub {
   margin-top: 40px;
   font-size: 30px;
+  font-weight: bold;
 }
 
 .destination__via-dl {
@@ -932,7 +937,7 @@ aside {
 
   label {
     width: 100%;
-
+    font-weight: bold;
   }
 }
 
@@ -1000,7 +1005,7 @@ aside {
     font-family: inherit;
     font-size: 14px;
     width: 100%;
-    margin-top: 4px;
+    margin-top: 10px;
   }
 
   textarea {
@@ -1016,6 +1021,6 @@ aside {
     width: 100%;
     height: 200px;
     resize: vertical;
-    margin-top: 4px;
+    margin-top: 10px;
   }
 }

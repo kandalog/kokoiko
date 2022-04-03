@@ -19,9 +19,8 @@
           <!-- プロフィール 右側 -->
           <div class="profile__right">
             <p class="profile__edit-link"><%= link_to "プロフィール編集", edit_user_registration_path %></p>
-            <p class="profile__destination-count">目的地<span>※9件</span></p>
+            <p class="profile__destination-count">登録済み目的地<span><%= current_user.destinations.count %>件</span></p>
             <p class="profile__introduction">
-              ※紹介文がこちらに
               <%= current_user.introduction %>
             </p>
           </div>

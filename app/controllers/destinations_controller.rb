@@ -1,5 +1,8 @@
 class DestinationsController < ApplicationController
 
+  before_action :authenticate_user!
+  before_action :correct_destination, only: [:show, :edit, :update, :destroy]
+
   def show
     @destination = Destination.find(params[:id])
   end
@@ -47,5 +50,14 @@ class DestinationsController < ApplicationController
     def destination_params
       params.require(:destination).permit(:destination, :date, :via1, :via2, :via3, :via4, :via5, :url1, :url2, :url3, :url4, :url5)
     end
+
+    def correct_destination
+      destination = Destination.find(params[:id])
+      unless destination.user == current_user
+        flash[:alert] = "権限がありません"
+        redirect_to root_path
+      end
+    end
+
     
 end
