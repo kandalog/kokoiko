@@ -102,6 +102,11 @@ a:hover {
   }
 }
 
+
+/* hamburger-menu 
+-----------------------------------------*/
+@import "hamburger.scss";
+
 /* common
 --------------------------------------------------------------*/
 .inner {
@@ -168,14 +173,17 @@ a:hover {
   display: flex;
   align-items: center;
   height: inherit;
+
   @include mq('tab') {
     padding: 0 20px;
   }
+
 }
 
 .header__title {
     font-size: 40px;
     font-family: 'RocknRoll One', serif;
+    position: relative;
     
   a {
     display: inline-block;
@@ -184,6 +192,11 @@ a:hover {
 
 .header__nav {
   margin-left: auto;
+
+  @include mq('tab') {
+    // display: none;
+  }
+  
 }
 
 .header__nav-list {
@@ -210,6 +223,7 @@ a:hover {
   background: url(../../assets/images/top-img2.jpg) no-repeat center center / cover;
   // 大きいサイズ top90%あたりを指定
   position: relative;
+  
 }
 
 .top_message {
@@ -219,6 +233,10 @@ a:hover {
   color: #fff;
   font-size: 44px;
   font-weight: bold;
+
+  @include mq('tab') {
+    font-size: 48px;
+  }
 }
 
 /* sign__up-inner
@@ -351,6 +369,14 @@ aside {
   flex-direction: column;
   // position: fixed;
   // top: 80px;
+
+  @include mq('tab') {
+    display: none;
+  }
+
+  @include mq('sp') {
+    display: none;
+  }
   
   a {
     color: $color-text;
@@ -376,6 +402,30 @@ aside {
   margin: 60px auto 0;
   background: $color-main;
   border-radius: 4px;
+  font-family: 'RocknRoll One';
+
+  &.destination {
+    display: none;
+    
+    @include mq('tab') {
+      font-size: 20px;
+      position: absolute;
+      bottom: 50%;
+      left: 120%;
+      transform: translateY(50%);
+      display: block;
+    }
+
+    @include mq('sp') {
+      font-size: 20px;
+      position: absolute;
+      bottom: 50%;
+      left: 120%;
+      transform: translateY(50%);
+      display: block;
+    }
+    
+  }
   
 
   a {
@@ -457,6 +507,10 @@ aside {
   width: 800px;
   max-width: 100%;
   margin: 0 auto;
+
+  @include mq('tab') {
+    width: 750px;
+  }
 }
 
 
@@ -573,11 +627,15 @@ aside {
 }
 
 .destination__item {
-  width: calc(33% - 50px * 2 / 3);
+  width: calc(33.3% - 50px * 2 / 3);
   background-color: $color-main;
   color: #fff;
   text-align: center;
   border-radius: 14px;
+
+  @include mq('tab') {
+    width: calc(33.3% - 20px * 2 / 3);
+  }
 
   a {
     display: block;
@@ -585,10 +643,18 @@ aside {
 
   &:not(:nth-child(3n + 1)) {
     margin-left: 50px;
+
+    @include mq('tab') {
+      margin-left: 20px;
+    }
   }
 
   &:nth-child(n + 4) {
     margin-top: 30px;
+
+    @include mq('tab') {
+      margin-top: 20px;
+    }
   }
 }
 
@@ -643,6 +709,10 @@ aside {
 .edit__inner {
   width: 800px;
   padding-top: 60px;
+
+  @include mq('tab') {
+    width: 750px;
+  }
 }
 
 .edit__form {
@@ -674,6 +744,10 @@ aside {
   input {
     width: 355px;
     max-width: 100%;
+
+    @include mq('tab') {
+      width: 320px;
+    }
   }
 
   p {
@@ -758,6 +832,9 @@ aside {
   margin: 0 auto;
   max-width: 100%;
 
+  @include mq('tab') {
+    width: 800px;
+  }
 }
 
 .destination__head {
@@ -771,12 +848,20 @@ aside {
   align-items: center;
   height: 100px;
   border-radius: 15px;
+
+  @include mq('tab') {
+    height: 85px;
+  }
 }
 
 .destination__head-location {
   font-size: 37px;
   font-family: 'Noto Serif JP', serif;
   font-weight: bold;
+
+  @include mq('tab') {
+    font-size: 35px;
+  }
 }
 
 .destination__head-date {
@@ -834,10 +919,18 @@ aside {
   font-size: 25px;
   font-family: 'Noto Serif JP', serif;
   font-weight: bold;
+
+  @include mq('tab') {
+    font-size: 22px;
+  }
   
   &.first {
     font-family: 'Noto sans JP', serif;
     font-weight: bold;
+
+    @include mq('tab') {
+      font-size: 24px;
+    }
   }
 
   a {
@@ -856,9 +949,17 @@ aside {
   font-family: 'Noto Serif JP', serif;
   font-weight: bold;
 
+  @include mq('tab') {
+    font-size: 22px;
+  }
+
   &.first {
     font-family: 'Noto sans JP', serif;
     font-weight: bold;
+
+    @include mq('tab') {
+      font-size: 24px;
+    }
   }
 
   a {
@@ -877,6 +978,10 @@ aside {
   max-width: 100%;
   margin: 0 auto;
   padding-top: 60px;
+
+  @include mq('tab') {
+    width: 750px;
+  }
 }
 
 .destination__form-dl {
@@ -920,6 +1025,10 @@ aside {
   margin-top: 40px;
   font-size: 30px;
   font-weight: bold;
+
+  @include mq('tab') {
+    font-size: 25px;
+  }
 }
 
 .destination__via-dl {
