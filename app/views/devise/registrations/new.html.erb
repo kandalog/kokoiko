@@ -1,9 +1,13 @@
+<%= devise_error_messages %>
+
 <div class="inner sign__up-inner">
 
     <h2 class="util__head sign__up-head">新規登録フォーム</h2>
 
     <div class="sign__up-form">
       <%= form_with scope: resource, as: resource_name, url: registration_path(resource_name), local: true do |f| %>
+
+      <%= devise_error_messages %>
 
         <div class="form__row">
           <%= f.label :name, "名前" %>
