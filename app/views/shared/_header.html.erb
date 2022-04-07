@@ -30,13 +30,17 @@
   </div>
 </div>
       
+
 <div id="hamburger__content" class="hamburger__content">
   <div class="hamburger__content-items">
-    <div class="hamburger__content-item"><a href="">Card</a></div>
-    <div class="hamburger__content-item"><a href="">News</a></div>
-    <div class="hamburger__content-item"><a href="">Price</a></div>
-    <div class="hamburger__content-item"><a href="">Access</a></div>
-    <div class="hamburger__content-item"><a href="">Contact</a></div>
+  <% if user_signed_in? %>
+    <div class="hamburger__content-item"><%= link_to "旅行先", root_path %></div>
+    <div class="hamburger__content-item"><%= link_to "プロフィール", user_path(current_user) %></div>
+    <div class="hamburger__content-item"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></div>
+    <% elsif %>
+    <div class="hamburger__content-item"><%= link_to "新規登録", new_user_registration_path %></div>
+    <div class="hamburger__content-item"><%= link_to "ログイン", new_user_session_path %></div>
+  <% end %>
   </div>
 </div>
       

@@ -6,11 +6,13 @@
           <div class="sign__up-form edit__form">
             <%= form_with scope: resource, as: resource_name, url: registration_path(resource_name), local: true, method: :patch do |f| %>
       
-              <div class="form__row edit__row">
+              <div class="form__row edit__row first">
                 <p class="edit__img"><%= image_tag current_user.image_url(:large) %><p>
-                  <%= f.label :image, "画像を選択", class: "image_label" %>
-                  <%= f.file_field :image, class: "image__input" %>
-                  <%= f.submit '変更する', class: "image__upload"%>
+                  <div class="edit__image-button">
+                    <%= f.label :image, "画像を選択", class: "image_label" %>
+                    <%= f.file_field :image, class: "image__input" %>
+                    <%= f.submit '変更する', class: "image__upload"%>
+                  </div>
               </div>
       
               <div class="form__row edit__row">

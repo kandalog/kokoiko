@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  
   has_many :destinations
   before_save { self.email = email.downcase }
   # Include default devise modules. Others available are:

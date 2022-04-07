@@ -118,6 +118,10 @@ a:hover {
 .util__head {
   font-size: 41px;
   font-weight: bold;
+
+  @include mq('sp') {
+    font-size: 38px;
+  }
 }
 
 .main {
@@ -128,6 +132,10 @@ a:hover {
 
 .header__adjust {
   padding-top: 80px;
+
+  @include mq('sp') {
+    padding-top: 50px;
+  }
 }
 
 .alert {
@@ -164,6 +172,10 @@ a:hover {
   left: 0;
   z-index: 5;
   padding-bottom: 20px;
+
+  @include mq('sp') {
+    height: 60px;
+  }
 }
 
 .header__inner {
@@ -194,7 +206,11 @@ a:hover {
   margin-left: auto;
 
   @include mq('tab') {
-    // display: none;
+    display: none;
+  }
+
+  @include mq('sp') {
+    display: none;
   }
   
 }
@@ -223,6 +239,10 @@ a:hover {
   background: url(../../assets/images/top-img2.jpg) no-repeat center center / cover;
   // 大きいサイズ top90%あたりを指定
   position: relative;
+
+  @include mq('sp') {
+  height: calc(100vh - 50px);
+  }
   
 }
 
@@ -234,8 +254,13 @@ a:hover {
   font-size: 44px;
   font-weight: bold;
 
-  @include mq('tab') {
-    font-size: 48px;
+
+  @include mq('sp') {
+    bottom: 4%;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 37px;
+    white-space: nowrap;
   }
 }
 
@@ -245,10 +270,18 @@ a:hover {
   width: 670px;
   max-width: 100%;
   margin: 80px auto 0;
+
+  @include mq('sp') {
+    padding: 0 20px;
+  }
 }
 
 .sign__up-form {
   margin-top: 50px;
+
+  @include mq('sp') {
+    margin-top: 40px;
+  }
 }
 
 .form__row {
@@ -311,12 +344,20 @@ a:hover {
   }
 }
 
+.form__img {
+
+}
+
 
 /* login__form
 --------------------------------------------------------------*/
 .login__inner {
   width: 670px;
   margin: 80px auto 0;
+
+  @include mq('sp') {
+    padding: 0 20px;
+  }
 }
 
 .login__head {
@@ -325,6 +366,10 @@ a:hover {
 
 .login__form {
   margin-top: 50px;
+
+  @include mq('sp') {
+    margin-top: 40px;
+  }
 }
 
 .form__checkbox {
@@ -420,7 +465,7 @@ aside {
       font-size: 20px;
       position: absolute;
       bottom: 50%;
-      left: 120%;
+      left: 100%;
       transform: translateY(50%);
       display: block;
     }
@@ -511,6 +556,10 @@ aside {
   @include mq('tab') {
     width: 750px;
   }
+
+  @include mq('sp') {
+    padding: 0 20px;
+  }
 }
 
 
@@ -518,6 +567,7 @@ aside {
 -----------------------------------------*/
 .profile__contents {
   width: fit-content;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -539,6 +589,11 @@ aside {
     border-radius: 50%;
     width: 145px;
     height: 145px;
+
+    @include mq('sp') {
+      width: 120px;
+      height: 130px;
+    }
   }
 }
 
@@ -555,6 +610,10 @@ aside {
 .profile__right {
   margin-left: 100px;
   padding-top: 10px;
+
+  @include mq('sp') {
+    margin-left: 50px;
+  }
 }
 
 .profile__edit-link {
@@ -598,6 +657,9 @@ aside {
   width: 100%;
   margin-top: 50px;
 
+  @include mq('sp') {
+    margin-top: 30px;
+  }
 }
 
 /* プロフィールの目的地一覧
@@ -624,6 +686,10 @@ aside {
   &.profile {
     margin-top: 20px;
   }
+
+  @include mq('sp') {
+    display: block;
+  }
 }
 
 .destination__item {
@@ -637,6 +703,19 @@ aside {
     width: calc(33.3% - 20px * 2 / 3);
   }
 
+  @include mq('sp') {
+    width: 100%;
+    max-width: 260px;
+
+    margin: 0 auto;
+  }
+
+  & + & {
+    @include mq('sp') {
+      margin-top: 20px;
+    }
+  }
+
   a {
     display: block;
   }
@@ -647,6 +726,10 @@ aside {
     @include mq('tab') {
       margin-left: 20px;
     }
+
+    @include mq('sp') {
+      margin: 20px auto 0;
+    }
   }
 
   &:nth-child(n + 4) {
@@ -655,7 +738,13 @@ aside {
     @include mq('tab') {
       margin-top: 20px;
     }
+
+    @include mq('sp') {
+      margin-top: 20px;
+    }
   }
+
+  
 }
 
 .destination__location {
@@ -713,6 +802,11 @@ aside {
   @include mq('tab') {
     width: 750px;
   }
+
+  @include mq('sp') {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .edit__form {
@@ -721,6 +815,17 @@ aside {
 
 .edit__row {
   display: flex;
+
+
+  @include mq('sp') {
+    display: block;
+  }
+
+  &.first {
+    @include mq('sp') {
+      display: flex;
+    }
+  }
 
   textarea {
     box-shadow: 2px 2px 6px #00000029;
@@ -737,6 +842,10 @@ aside {
     width: 355px;
     max-width: 100%;
     height: 200px;
+
+    @include mq('sp') {
+      width: 100%;
+    }
   }
 
   
@@ -748,13 +857,28 @@ aside {
     @include mq('tab') {
       width: 320px;
     }
+    
+    @include mq('sp') {
+      width: 100%;
+    }
   }
 
   p {
 
     &:not(:first-of-type) {
       margin-left: 80px;
+
+      @include mq('sp') {
+        margin-left: 0px;
+      }
     }
+  }
+}
+
+.edit__image-button {
+
+  @include mq('sp') {
+    margin-left: 20px;
   }
 }
 
@@ -792,6 +916,11 @@ aside {
   
   font-size: 14px !important;
   cursor: pointer;
+
+  &.devise {
+    width: 120px;
+    height: 40px;
+  }
 }
 
 .image__input {
@@ -817,6 +946,10 @@ aside {
   width: 800px;
   max-width: 100%;
   margin: 0 auto;
+
+  @include mq('sp') {
+    padding: 0 40px;
+  }
 }
 
 .index__main {
@@ -979,8 +1112,9 @@ aside {
   margin: 0 auto;
   padding-top: 60px;
 
-  @include mq('tab') {
+  @include mq('sp') {
     width: 750px;
+    padding: 60px 20px 0;
   }
 }
 
@@ -1015,6 +1149,10 @@ aside {
     font-family: inherit;
     font-size: 14px;
     width: 70%;
+
+    @include mq('sp') {
+      width: 100%;
+    }
   }
 }
 
@@ -1039,6 +1177,11 @@ aside {
   display: flex;
   width: 100%;
   margin-top: 15px;
+
+  @include mq('sp') {
+    display: block;
+    margin-top: 40px;
+  }
 }
 
 .destination__label-via {
@@ -1052,6 +1195,10 @@ aside {
 
 .destination__input-via {
   margin-top: 10px;
+
+  @include mq('sp') {
+    margin-top: 5px;
+  }
   
 
   [type="text"] {
@@ -1075,6 +1222,15 @@ aside {
 
   & + & {
     margin-left: 50px;
+
+    @include mq('sp') {
+      margin-left: 0;
+      margin-top: 5px;
+    }
+  }
+
+  @include mq('sp') {
+    width: 100%;
   }
 }
 

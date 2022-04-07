@@ -35,4 +35,10 @@ document.getElementById('hamburger__icon').addEventListener('click', function() 
   document.getElementById('hamburger__background').classList.toggle('active')
 })
 
+document.getElementById('hamburger__background').addEventListener('click', function() {
+  this.classList.remove('active')
+  document.getElementById('hamburger__icon').classList.remove('active')
+  document.getElementById('hamburger__content').classList.remove('active')
+})
+
 })

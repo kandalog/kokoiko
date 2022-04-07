@@ -6,6 +6,12 @@
   display: none;
   transition: 0.3s;
 
+  @include mq('tab') {
+    display: block;
+    top: 30px;
+    right: 25px;
+  }
+
   @include mq('sp') {
     display: block;
   }
@@ -91,8 +97,10 @@
   a {
     display: block;
     color: #707070;
+    font-family: 'RocknRoll One';
     text-decoration: none;
-    padding: 20px 145px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    font-size: 18px;
   }
 }
 

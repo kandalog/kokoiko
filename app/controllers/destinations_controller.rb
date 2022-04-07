@@ -14,10 +14,10 @@ class DestinationsController < ApplicationController
   def create
     @destination = current_user.destinations.build(destination_params)
     if @destination.save
-      flash[:success] = "投稿に成功しました"
+      flash[:notice] = "投稿に成功しました"
       redirect_to root_url
     else
-      flash[:notice] = "投稿に失敗しました"
+      flash.now[:alert] = "投稿に失敗しました"
       render 'new'
     end
   end

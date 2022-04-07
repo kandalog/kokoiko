@@ -26,8 +26,8 @@
         </div>
 
         <div class="form__img">
-          <%= f.label :image, "写真を追加" %>
-          <%= f.file_field :image %>
+          <%= f.label :image, "写真を追加", class: "image_label devise" %>
+          <%= f.file_field :image, class: "image__input" %>
         </div>
       
         <div class="form__button">
