@@ -196,6 +196,7 @@ a:hover {
     font-size: 40px;
     font-family: 'RocknRoll One', serif;
     position: relative;
+    white-space: nowrap;
 
     @include mq('sp') {
       font-size: 35px;
