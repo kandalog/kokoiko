@@ -5,7 +5,13 @@
 
       <div class="destination__head">
         <p class="destination__head-location"><%= @destination.destination %></p>
-        <p class="destination__head-date"><%= @destination.date %></p>
+        <p class="destination__head-date">
+          <% if @destination.date.present? %>
+            <%= @destination.date %>
+          <% else %>
+            日程未定
+          <% end %>
+        </p>
       </div>
 
       <ul class="destination__button">
@@ -17,7 +23,7 @@
         </li>
       </ul>
 
-
+        <!-- リスト部 -->
       <dl class="destination__dl">
 
         <div class="destination__row">

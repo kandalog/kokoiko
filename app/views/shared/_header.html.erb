@@ -2,7 +2,11 @@
 <div class="header__inner">
   <h1 class="header__title">
     <%= link_to "ココイコ", root_path %>
-    <div class="sidebar__button destination"><%= link_to "目的地を追加", new_destination_path  %></div>
+    <div class="sidebar__button destination">
+      <% if user_signed_in?  %>
+        <%= link_to "目的地を追加", new_destination_path  %>
+      <%end %>
+    </div>
   </h1>
   <nav class="header__nav">
   <ul class="header__nav-list">

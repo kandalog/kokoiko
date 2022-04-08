@@ -196,6 +196,10 @@ a:hover {
     font-size: 40px;
     font-family: 'RocknRoll One', serif;
     position: relative;
+
+    @include mq('sp') {
+      font-size: 35px;
+    }
     
   a {
     display: inline-block;
@@ -321,6 +325,8 @@ a:hover {
 
 .form__button {
   margin-top: 20px;
+  position: relative;
+  width: fit-content;
 
   &.destination {
     padding-bottom: 20px;
@@ -377,6 +383,18 @@ a:hover {
   display: none;
   input {
     border-radius: 0px;
+  }
+}
+
+.to__login {
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+
+  a {
+    color: $color-main;
   }
 }
 
