@@ -24,75 +24,8 @@
       </ul>
 
         <!-- リスト部 -->
-      <dl class="destination__dl">
-
-        <div class="destination__row">
-          <dt class="destination__dt first">
-            行き先
-          </dt>
-          <dd class="destination__dd first">
-            URL
-          </dd>
-        </div>
-
-        <div class="destination__row">
-          <dt class="destination__dt">
-            <%= @destination.via1 %>
-          </dt>
-          <dd class="destination__dd">
-          <% if @destination.url1.present? %>
-            <%= link_to @destination.url1, @destination.url1, target: :_blank, rel: "noopener noreferrer" %>
-          <% end %>
-          </dd>
-        </div>
-
-        <div class="destination__row">
-          <dt class="destination__dt">
-            <%= @destination.via2 %>
-          </dt>
-          <dd class="destination__dd">
-          <% if @destination.url2.present? %>
-            <%= link_to @destination.url2, @destination.url2, target: :_blank, rel: "noopener noreferrer" %>
-          <% end %>
-          </dd>
-        </div>
-
-        <div class="destination__row">
-          <dt class="destination__dt">
-            <%= @destination.via3 %>
-          </dt>
-          <dd class="destination__dd">
-          <% if @destination.url3.present? %>
-            <%= link_to @destination.url3, @destination.url3, target: :_blank, rel: "noopener noreferrer" %>
-          <% end %>
-          </dd>
-        </div>
-
-        <div class="destination__row">
-          <dt class="destination__dt">
-            <%= @destination.via4 %>
-          </dt>
-          <dd class="destination__dd">
-          <% if @destination.url4.present? %>
-            <%= link_to @destination.url4, @destination.url4, target: :_blank, rel: "noopener noreferrer" %>
-          <% end %>
-          </dd>
-        </div>
-
-        <div class="destination__row">
-          <dt class="destination__dt">
-            <%= @destination.via5 %>
-          </dt>
-          <dd class="destination__dd">
-          <% if @destination.url5.present? %>
-            <%= link_to @destination.url5, @destination.url5, target: :_blank, rel: "noopener noreferrer" %>
-          <% end %>
-          </dd>
-        </div>
-
-
-      </dl>
-
+      <%= render "dl" %>
+      <%= render "dl_mobile" %>
 
       
     </div>

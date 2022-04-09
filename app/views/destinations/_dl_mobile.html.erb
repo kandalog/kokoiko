@@ -1,0 +1,48 @@
+<dl class="destination__dl-mobile">
+  
+  <div class="destination__mobile-row">
+    <div class="destination__location-mobile">
+      <p><%= @destination.via1 %></p>
+    </div>
+    <div class="destination__url-mobile">
+      <%= link_to @destination.url1, @destination.url1, target: :_blank, rel: "noopener noreferrer" if @destination.url1.present? %>
+    </div>
+  </div>
+
+  <div class="destination__mobile-row">
+    <div class="destination__location-mobile">
+      <p><%= @destination.via2 %></p>
+    </div>
+    <div class="destination__url-mobile">
+      <%= link_to @destination.url2, @destination.url2, target: :_blank, rel: "noopener noreferrer" if @destination.url2.present? %>
+    </div>
+  </div>
+
+  <div class="destination__mobile-row">
+    <div class="destination__location-mobile">
+      <p><%= @destination.via3 %></p>
+    </div>
+    <div class="destination__url-mobile">
+      <%= link_to @destination.url3, @destination.url3, target: :_blank, rel: "noopener noreferrer" if @destination.url3.present? %>
+    </div>
+  </div>
+
+  <div class="destination__mobile-row">
+    <div class="destination__location-mobile">
+      <p><%= @destination.via4 %></p>
+    </div>
+    <div class="destination__url-mobile">
+      <%= link_to @destination.url4, @destination.url4, target: :_blank, rel: "noopener noreferrer" if @destination.url4.present? %>
+    </div>
+  </div>
+
+  <div class="destination__mobile-row">
+    <div class="destination__location-mobile">
+      <p><%= @destination.via5 %></p>
+    </div>
+    <div class="destination__url-mobile">
+      <%= link_to @destination.url5, @destination.url5, target: :_blank, rel: "noopener noreferrer" if @destination.url5.present? %>
+    </div>
+  </div>
+
+</dl>

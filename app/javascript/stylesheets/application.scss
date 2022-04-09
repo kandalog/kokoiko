@@ -781,6 +781,11 @@ aside {
   letter-spacing: 0.1em;
   font-family: 'Noto Serif JP', serif;
   font-weight: bold;
+
+  max-width: 220px;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .destination__img {
@@ -987,6 +992,10 @@ aside {
   @include mq('tab') {
     width: 800px;
   }
+
+  @include mq('sp') {
+    padding: 0 10px;
+  }
 }
 
 .destination__head {
@@ -1000,9 +1009,15 @@ aside {
   align-items: center;
   height: 100px;
   border-radius: 15px;
+  overflow: auto;
+  white-space: nowrap;
 
   @include mq('tab') {
     height: 85px;
+  }
+
+  @include mq('sp') {
+    height: 80px;
   }
 }
 
@@ -1010,9 +1025,17 @@ aside {
   font-size: 37px;
   font-family: 'Noto Serif JP', serif;
   font-weight: bold;
+  width: 100%;
+  overflow: auto;
 
   @include mq('tab') {
     font-size: 35px;
+  }
+
+  @include mq('sp') {
+    font-size: 30px;
+    max-width: 260px;
+    overflow: auto;
   }
 }
 
@@ -1021,6 +1044,16 @@ aside {
   margin-left: 30px;
   font-family: 'Noto Serif JP', serif;
   font-weight: bold;
+  max-width: 200px;
+  min-width: 100px;
+  overflow: auto;
+
+
+  @include mq('sp') {
+    font-size: 25px;
+    min-width: 85px;
+
+  }
 }
 
 .destination__button {
@@ -1045,6 +1078,10 @@ aside {
 -----------------------------------------*/
 .destination__dl {
   margin-top: 10px;
+
+  @include mq('sp') {
+    display: none;
+  }
 }
 
 .destination__row {
@@ -1174,6 +1211,7 @@ aside {
     }
   }
 }
+
 
 /* 経由地点
 -----------------------------------------*/
@@ -1322,4 +1360,67 @@ aside {
 }
 .field_with_errors {
   display: contents;
+}
+
+/* dl-mobile
+-----------------------------------------*/
+.destination__dl-mobile {
+  display: none;
+  margin-top: 10px;
+
+  @include mq('sp') {
+    display: block;
+  }
+}
+
+.destination__mobile-row {
+  & + & {
+    margin-top: 20px;
+  }
+}
+
+.destination__location-mobile {
+  border-right: 1px solid #fff;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $color-main;
+  color: #fff;
+  height: 40px;
+  
+  p {
+    font-weight: bold;
+    font-size: 22px;
+    font-family: 'Noto Serif JP', serif;
+    overflow: scroll;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+}
+
+.destination__url-mobile {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
+  background: #474C51;
+  height: 40px;
+  
+
+  a {
+    font-size: 20px;
+    overflow: auto;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 18px;
+    max-width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+  }
 }
