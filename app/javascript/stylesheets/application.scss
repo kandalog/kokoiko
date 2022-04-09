@@ -769,7 +769,7 @@ aside {
 .destination__location {
   overflow: auto;
   font-size: 30px;
-  padding-top: 33px;
+  padding: 33px 5px 0;
   white-space: nowrap;
   font-family: 'Noto Serif JP', serif;
   font-weight: bold;
@@ -1047,12 +1047,11 @@ aside {
   max-width: 200px;
   min-width: 100px;
   overflow: auto;
+  letter-spacing: .2em;
 
 
   @include mq('sp') {
     font-size: 25px;
-    min-width: 85px;
-
   }
 }
 
