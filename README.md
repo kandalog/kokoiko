@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
+ここ行きたい!を忘れない。
+自分だけの旅行リストを作成。友人や恋人との共同旅行リストとしても利用可能
 
-Things you may want to cover:
+## 使用技術
 
-* Ruby version
+### バックエンド
+- Ruby 3.1.0
+- Rails 6.1.4.7
 
-* System dependencies
+### 主なgem
+- Devise
+- Carrierwave
+- MiniMagick
+- Action Mailer
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### フロトントエンド
+- javascript
+- bootstrap5
+- sass
