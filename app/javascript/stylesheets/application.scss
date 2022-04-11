@@ -1108,6 +1108,17 @@ aside {
   font-family: 'Noto Serif JP', serif;
   font-weight: bold;
 
+  
+
+  div {
+    font-weight: bold;
+    font-size: 22px;
+    font-family: 'Noto Serif JP', serif;
+    overflow: auto;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+
   @include mq('tab') {
     font-size: 22px;
   }
