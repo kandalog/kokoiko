@@ -36,7 +36,7 @@
 - 2021年9月 JavaScript/linux/sql/git学習開始
 - 2021年12月 Ruby学習開始 (Youtube Udemy Ruby on Railsチュートリアル)
 - 2022年3月19日 webサービス開発開始
-- 2021年4月10日 Herokuデプロイ完了
+- 2022年4月10日 Herokuデプロイ完了
 
 ## 開発背景
 新型コロナウイルスが蔓延し、度重なる緊急事態宣言や外出自粛により、
