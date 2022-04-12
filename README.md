@@ -32,8 +32,6 @@
 - 個人開発（一人）
 
 ## 開発期間・過程
-- 2022年3月19日〜4月10日
-
 - 2021年2月 web制作学習開始
 - 2021年9月 JavaScript/linux/sql/git学習開始
 - 2021年12月 Ruby学習開始 (Youtube Udemy Ruby on Railsチュートリアル)
