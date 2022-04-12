@@ -17,7 +17,7 @@
 - Ruby 3.1.0
 - Rails 6.1.4.7
 
-### 主なgem
+### 主なgemや機能
 - Devise
 - Carrierwave
 - MiniMagick
