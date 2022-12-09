@@ -21,7 +21,6 @@
 - Devise
 - Carrierwave
 - MiniMagick
-- Action Mailer
 
 ### フロトントエンド
 - javascript
